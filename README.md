@@ -14,7 +14,12 @@
 
 - Install [NodeJS](https://nodejs.org/en/)
 
-## Deployment 
+## Architecture
+
+![Blockchain Project Physical Architecture](![alt text](docs/Physical-Architecture.png))
+
+## Deployment
+
 ```bash
 # Clone 
 $ https://github.com/Nikkhare/Eth-Todo-Dapp.git
@@ -29,3 +34,7 @@ $ npx hardhat run --network ganache scripts/deploy.js
 # Run the app
 $ npm run start
 ```
+
+## Setup Ganache with Metamask
+
+Document(<https://docs.cranq.io/web-3/setting-up-ganache-with-metamask>)
