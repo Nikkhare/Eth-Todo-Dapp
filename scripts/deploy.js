@@ -12,17 +12,17 @@ async function main() {
   const [deployer] = await ethers.getSigners();
 
   // Deploy contract
-  const TodoWeb3 = await ethers.getContractFactory("TodoWeb3");
-  const todoWeb3 = await TodoWeb3.deploy();
-  await todoWeb3.deployed();
-  console.log(`Deployed task contract at: ${todoWeb3.address}`);
+  const TodoList = await ethers.getContractFactory("TodoList");
+  const todoList = await TodoList.deploy();
+  await todoList.deployed();
+  console.log(`Deployed task contract at: ${todoList.address}`);
 
   // Creating a list of tasks
-  const tasks = ["Nikkhare first dapp"];
+  const tasks = ["Nikkhare first dapp", "Hello"];
 
   // List tasks
   for (let i = 0; i < tasks.length; i++) {
-    let transaction = await todoWeb3.connect(deployer).createTask(tasks[i]);
+    let transaction = await todoList.connect(deployer).createTask(tasks[i]);
     await transaction.wait();
     console.log(`Created task${i + 1}: ${tasks[i]}`);
   }
