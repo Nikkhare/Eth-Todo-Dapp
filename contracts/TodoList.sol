@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
 contract TodoList {
@@ -15,6 +15,8 @@ contract TodoList {
     event TaskCreated(uint256 id, string content, bool completed);
 
     event TaskCompleted(uint256 id, bool completed);
+
+    // event TaskUpdated(uint256 id, string newContent, bool completed);
 
     function createTask(string memory _content) public {
         taskCount++;
@@ -36,4 +38,12 @@ contract TodoList {
             }
         }
     }
+
+    // function updateTask(uint256 _id, string memory _newContent) public {
+    //     require(_id <= taskCount, "Invalid task ID");
+    //     require(tasks[_id].id != 0, "Task does not exist");
+
+    //     tasks[_id].content = _newContent;
+    //     emit TaskUpdated(_id, _newContent, false);
+    // }
 }
