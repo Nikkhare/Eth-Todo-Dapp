@@ -30,6 +30,7 @@ $ npm install -g hardhat
 
 # Deploy smart  contract to the local network using Hardhat
 $ npx hardhat run --network ganache scripts/deploy.js 
+$ Copy the contract address from the terminal and paste it in todo-dapp/src/utils/config.js in the address object.
 
 # Run the app
 $ npm run start
