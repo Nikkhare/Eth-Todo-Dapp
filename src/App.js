@@ -4,7 +4,6 @@ import { ethers } from "ethers";
 
 // Components
 import Task from "./components/Task";
-// import Logic from "./components/logic";
 
 // ABIs
 import TodoList from "./utils/TodoList.json";
